@@ -6,4 +6,9 @@ sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update
 sudo apt-get install fish
 fish -v
-chsh -s $(which fish)
+
+# install fisher
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+sudo apt-get install fonts-powerline -y
+
+echo 'exec fish' >> ~/.bashrc
